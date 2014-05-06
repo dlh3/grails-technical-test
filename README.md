@@ -1,3 +1,8 @@
+Tuesday, May 6, 2014 - 1:07PM PST
+* Challenge started
+
+
+
 # EA Grails Technical Test
 
 ### Task
