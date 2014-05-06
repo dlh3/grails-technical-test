@@ -7,13 +7,15 @@ class GithubController {
 
 	static defaultAction = 'find'
 
+	def githubService
+
 	def find() {
 		if (!request.post) {
 			return
 		}
 		def username = params.githubId
 
-		def repositories = null
+		def repositories = githubService.findRepositoriesByUsername(username)
 		[username: username, repositories: repositories]
 	}
 }

@@ -33,6 +33,9 @@ Tuesday, May 6, 2014 - 1:07PM PST
 1:45PM
 * Added Github Controller and associated view (and messages)
 
+2:15PM
+* Added Github Service to lookup repositories by username from github API
+
 
 
 #################
