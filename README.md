@@ -1,6 +1,11 @@
 Tuesday, May 6, 2014 - 1:07PM PST
 * Challenge started
 
+1:12PM
+* Missing applicationContext.xml
+
+1:16PM
+* app.name property is incorrect
 
 
 # EA Grails Technical Test
