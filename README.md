@@ -1,3 +1,16 @@
+# EA Grails Technical Test - Completed by Dave Hughes (dlh3)
+
+## Users
+### In environment=development
+admin:admin
+user:user
+
+### In environment=production
+admin:free2play
+dlh3:dlh3
+
+
+## Log
 Tuesday, May 6, 2014 - 1:07PM PST
 * Challenge started
 
@@ -7,7 +20,16 @@ Tuesday, May 6, 2014 - 1:07PM PST
 1:16PM
 * app.name property is incorrect
 
+1:25PM
+* Added Spring Security
 
+1:30PM
+* Added BootStrap for user creation (see users section at top)
+
+
+
+
+#################
 # EA Grails Technical Test
 
 ### Task
