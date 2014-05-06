@@ -1,11 +1,11 @@
 # EA Grails Technical Test - Completed by Dave Hughes (dlh3)
 
 ## Users
-### In environment=development
+In environment=development
 * admin:admin
 * user:user
 
-### In environment=production
+In environment=production
 * admin:free2play
 * dlh3:dlh3
 
@@ -25,6 +25,10 @@ Tuesday, May 6, 2014 - 1:07PM PST
 
 1:30PM
 * Added BootStrap for user creation (see users section at top)
+
+1:35PM
+* Added static rule for ROLE_ADMIN access to H2 web console
+* Added Spock plugin for unit tests
 
 
 
