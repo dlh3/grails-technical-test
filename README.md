@@ -39,6 +39,9 @@ Tuesday, May 6, 2014 - 1:07PM PST
 2:30PM
 * Added "lookup current user" feature
 
+2:45PM
+* Added "more details on repository click" feature
+
 
 
 #################

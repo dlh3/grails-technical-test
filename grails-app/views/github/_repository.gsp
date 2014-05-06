@@ -1,1 +1,1 @@
-<g:message code="github.watchedRepository" args="[repository.name, repository.watchers]" /><br />
+<a href="#" onclick="javascript:alert('<g:message code="github.watchedRepositoryMore" args="[repository.id, repository.created_at]" />')"><g:message code="github.watchedRepository" args="[repository.name, repository.watchers]" /></a><br />
