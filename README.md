@@ -1,17 +1,27 @@
 # EA Grails Technical Test - Completed by Dave Hughes (dlh3)
 
 ## Users
-In environment=development
+### environment=development
 * admin:admin
 * user:user
 
-In environment=production
+### environment=production
 * admin:free2play
 * dlh3:dlh3
 
 
-## Log
-Tuesday, May 6, 2014 - 1:07PM PST
+## Features
+* Spring Security for authentication and authorization
+* Spock for Unit Tests
+* Repository Lookup from Github API
+* Lookup Repositories by current Spring Security username
+* Alert for Repository ID and Created_At fields when repository is clicked
+* I18N messages
+
+
+## Change Log
+Tuesday, May 6, 2014
+1:07PM PST
 * Challenge started
 
 1:12PM
@@ -42,9 +52,11 @@ Tuesday, May 6, 2014 - 1:07PM PST
 2:45PM
 * Added "more details on repository click" feature
 
+2:55PM
+* Challenge complete
 
 
-#################
+---
 # EA Grails Technical Test
 
 ### Task
