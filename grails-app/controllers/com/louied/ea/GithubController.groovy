@@ -8,12 +8,19 @@ class GithubController {
 	static defaultAction = 'find'
 
 	def githubService
+	def springSecurityService
 
 	def find() {
-		if (!request.post) {
+		if (!request.post && params.id != 'current') {
 			return
 		}
-		def username = params.githubId
+
+		def username
+		if (params.id) {
+			username = springSecurityService.currentUser.username
+		} else {
+			username = params.githubId
+		}
 
 		def repositories = githubService.findRepositoriesByUsername(username)
 		[username: username, repositories: repositories]

@@ -7,6 +7,7 @@
 	<body>
 		<br />
 		<g:form action="find" name="githubLookupForm">
+			<g:link id="current"><g:message code="github.lookupRepositoriesForCurrentUser" args="[sec.loggedInUserInfo(field: 'username')]" /></g:link><br />
 			<g:message code="github.username" />: <g:textField name="githubId" value="${username}" placeholder="${g.message(code:'github.usernamePlaceholder')}" size="100" autofocus="autofocus" /><br />
 			<g:submitButton name="submit" value="${g.message(code:'github.lookupRepositories')}" />
 		</g:form>

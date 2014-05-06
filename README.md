@@ -36,6 +36,9 @@ Tuesday, May 6, 2014 - 1:07PM PST
 2:15PM
 * Added Github Service to lookup repositories by username from github API
 
+2:30PM
+* Added "lookup current user" feature
+
 
 
 #################

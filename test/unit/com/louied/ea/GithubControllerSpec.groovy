@@ -12,26 +12,59 @@ class GithubControllerSpec extends spock.lang.Specification {
 			controller.defaultAction == 'find'
 	}
 
-	def 'the model is empty on GET'() {
+	def 'the GithubService is not queried on GET without ID'() {
 		when: 'the request is GET'
 			controller.request.method = 'GET'
+
+		and: 'ID is null'
+			controller.params.id = null
 
 		and: 'the controller is invoked'
 			def model = controller.find()
 
 		then: 'there is no model returned'
 			model == null
+
+		and: 'the GithubService is not queried'
+			0 * controller.githubService.findRepositoriesByUsername(_)
 	}
 
-	def 'the GithubService is not queried on GET'() {
+	def 'the GithubService is not queried on GET with ID!="current"'() {
 		when: 'the request is GET'
 			controller.request.method = 'GET'
+
+		and: 'ID is present but not "current"'
+			controller.params.id = 'somethingElse'
 
 		and: 'the controller is invoked'
 			def model = controller.find()
 
-		then: 'the service is not queried'
+		then: 'there is no model returned'
+			model == null
+
+		and: 'the GithubService is not queried'
 			0 * controller.githubService.findRepositoriesByUsername(_)
+	}
+
+	def 'the GithubService is queried on GET with ID=="current"'() {
+		given: 'the user is logged in'
+			def loggedInUsername = 'someLoggedInUser'
+			controller.springSecurityService = [currentUser: [username: loggedInUsername]]
+
+		when: 'the request is GET'
+			controller.request.method = 'GET'
+
+		and: 'ID is "current"'
+			controller.params.id = 'current'
+
+		and: 'the controller is invoked'
+			def model = controller.find()
+
+		then: 'model.username is the current user'
+			model.username == loggedInUsername
+
+		and: 'the GithubService is queried for the logged in user'
+			1 * controller.githubService.findRepositoriesByUsername(loggedInUsername)
 	}
 
 	def "when the githubId is POST'd, the username is set accordingly"() {
