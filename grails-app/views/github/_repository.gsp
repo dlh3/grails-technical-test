@@ -1,0 +1,1 @@
+<g:message code="github.watchedRepository" args="[repository.name, repository.watchers]" /><br />

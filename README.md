@@ -30,6 +30,8 @@ Tuesday, May 6, 2014 - 1:07PM PST
 * Added static rule for ROLE_ADMIN access to H2 web console
 * Added Spock plugin for unit tests
 
+1:45PM
+* Added Github Controller and associated view (and messages)
 
 
 
