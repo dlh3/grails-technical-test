@@ -2,12 +2,12 @@
 
 ## Users
 ### In environment=development
-admin:admin
-user:user
+* admin:admin
+* user:user
 
 ### In environment=production
-admin:free2play
-dlh3:dlh3
+* admin:free2play
+* dlh3:dlh3
 
 
 ## Log
